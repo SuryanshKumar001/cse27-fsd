@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{     
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .card{
+        background-color: lightcoral;
+        height: 300px;
+        width: 300px;
+        text-align: center;
+    }
+    .card h1{
+        background-color: lightcoral;
+
+    }
+    .clist{
+        background-color: lightcoral;
+    }
+    .clist li{
+        background-color: lightcoral;
+    }
+</style>
+<body>
+    <div class="card">
+       <h1>Online Shop</h1>
+       <div class="clist">
+        <ul>
+            <li>chawal: 500</li>
+            <li>chai: 700</li>
+            <li>coffee: 800</li>
+            <li>chini: 400</li>
+            <li>daal: 800</li>
+        </ul>
+          <button>Buy now</button>
+       </div>
+    </div>
+    <script>
+        const items={
+            chawal: 500,
+            chai: 700,
+            coffee: 800,
+            chini: 400,
+            daal: 800
+        }
+
+        function cart(){   
+                let x=0;
+                let a= prompt("enter your product name:");
+                let b=prompt("enter quantity (in kg):");
+                x+=items[a.toLowerCase()]*b;
+                alert(`Your total amount is:${x}`);
+        };
+        const btn = document.querySelector("button");
+        btn.addEventListener("click",()=>{
+            cart();
+        })
+
+        
+
+        
+    </script>
+</body>
+</html>
